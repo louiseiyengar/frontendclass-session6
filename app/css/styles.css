@@ -1,13 +1,5 @@
 @import url(futura/stylesheet.css);
 html {
-  --basil-green: #88a308;
-  --breakpoint: 640px; }
-
-::selection {
-  background: var(--basil-green);
-  color: #fff; }
-
-html {
   box-sizing: border-box; }
 
 *,
@@ -15,13 +7,9 @@ html {
 *:after {
   box-sizing: inherit; }
 
-.cf::before,
-.cf::after {
-  content: ' ';
-  display: table; }
-
-.cf::after {
-  clear: both; }
+::selection {
+  background: #88a308;
+  color: #fff; }
 
 * {
   margin: 0;
@@ -31,8 +19,10 @@ body {
   font: 100%/1.5 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
   color: #333;
   max-width: 840px;
-  margin: 0 auto;
-  margin-top: 24px; }
+  margin: 0 auto; }
+  @media (min-width: 640px) {
+    body {
+      margin-top: 24px; } }
 
 img {
   width: 100%;
@@ -40,7 +30,7 @@ img {
 
 h2,
 h3 {
-  color: var(--basil-green);
+  color: #88a308;
   margin: 8px 0;
   font-size: 1.4rem;
   letter-spacing: -1px; }
@@ -68,8 +58,10 @@ article ol {
 header {
   position: relative;
   height: 120px;
-  background: var(--basil-green);
-  border-radius: 8px 8px 0px 0px; }
+  background: #88a308; }
+  @media only screen and (min-width: 640px) {
+    header {
+      border-radius: 8px 8px 0px 0px; } }
 
 header h1 {
   background: url(img/basil.png) no-repeat;
@@ -100,6 +92,17 @@ header a.beta {
   text-transform: uppercase;
   transform: rotate(20deg);
   transition: all 1s ease; }
+  @media only screen and (max-width: 640px) {
+    header a.beta {
+      top: 5px; } }
+  @media only screen and (max-width: 370px) {
+    header a.beta {
+      top: 5px;
+      right: 5px;
+      width: 50px;
+      height: 50px;
+      font-size: 0.8rem;
+      line-height: 50px; } }
 
 header a.beta:hover {
   transform: rotate(0deg) scale(1.2); }
@@ -147,7 +150,7 @@ aside {
 
 footer {
   clear: both;
-  background-color: var(--basil-green);
+  background-color: #88a308;
   padding: 1rem;
   border-radius: 0 0 4px 4px; }
 

@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "startSass": "node-sass --watch scss/styles.scss --output app/css/",
-    "startmac": "browser-sync start --browser 'google chrome' --server 'app' --files 'app'"
+    "startpc": "browser-sync start --browser \"chrome.exe\" --server \"app\" --files \"app\"",
+    "boom!": "concurrently \"npm run startpc\" \"npm run startSass\""
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/front-end-foundations/6-Basilica#readme",
   "devDependencies": {
     "browser-sync": "^2.26.3",
+    "concurrently": "^4.0.1",
     "node-sass": "^4.9.4"
   }
 }
